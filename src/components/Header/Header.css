@@ -11,9 +11,9 @@
 }
 
 .header.scrolled {
-    background: rgba(var(--bg-primary-rgb), 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: var(--shadow);
+    background: rgba(var(--bg-primary-rgb), 0.85);
+    backdrop-filter: blur(12px) saturate(180%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .header-content {
@@ -35,13 +35,29 @@
 }
 
 .nav-list button {
+    position: relative;
     background: none;
     border: none;
     color: var(--text-secondary);
     font-weight: 500;
     cursor: pointer;
-    transition: color 0.3s ease;
     font-size: 1rem;
+    padding: 0.25rem 0;
+}
+
+.nav-list button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: var(--accent-primary);
+    transition: width 0.3s ease;
+}
+
+.nav-list button:hover::after {
+    width: 100%;
 }
 
 .nav-list button:hover {
@@ -94,8 +110,28 @@
     }
 
     .nav-list button {
-        text-align: left;
-        padding: 0.5rem 0;
-        font-size: 1.1rem;
+        position: relative;
+        background: none;
+        border: none;
+        color: var(--text-secondary);
+        font-weight: 500;
+        cursor: pointer;
+        font-size: 1rem;
+        padding: 0.25rem 0;
+    }
+
+    .nav-list button::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 0;
+        background: var(--accent-primary);
+        transition: width 0.3s ease;
+    }
+
+    .nav-list button:hover::after {
+        width: 100%;
     }
 }
