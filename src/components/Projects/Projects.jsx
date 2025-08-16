@@ -1,39 +1,44 @@
 import { useRef } from "react";
+import project1Img from '/src/assets/images/project1.png';
+import project2Img from '/src/assets/images/project2.png';
+import project3Img from '/src/assets/images/project3.png';
+import project4Img from '/src/assets/images/project4.png';
+import project5Img from '/src/assets/images/project5.png';
 import './Projects.css';
 
 const projects = [
     {
         title: "To-Do-App",
         description: "You can record data, delete, and edit it.",
-        image: "/src/assets/images/project1.png",
+        image: project1Img,
         demo: "https://nattasith0.github.io/My_To-Do_App/",
         github: "https://github.com/Nattasith0/My_To-Do_App"
     },
     {
         title: "Weather-App",
         description: "Can forecast the weather for each area as well as specify the weather forecast in advance.",
-        image: "/src/assets/images/project2.png",
+        image: project2Img,
         demo: "https://nattasith0.github.io/my-weather-app/",
         github: "https://github.com/Nattasith0/my-weather-app"
     },
     {
         title: "Portfolio-Website",
         description: "A website that recommends about me.",
-        image: "/src/assets/images/project3.png",
+        image: project3Img,
         demo: "https://nattasith0.github.io/portfolio-website/",
         github: "https://github.com/Nattasith0/portfolio-website"
     },
     {
         title: "Mini-Ecommerce",
         description: "The website with product details.",
-        image: "/src/assets/images/project4.png",
+        image: project4Img,
         demo: "https://nattasith0.github.io/mini-ecommerce-collaboration/",
         github: "https://github.com/Nattasith0/mini-ecommerce-collaboration"
     },
     {
         title: "Portfolio-Website-Team",
         description: "A website that recommends about me and my friends.",
-        image: "/src/assets/images/project5.png",
+        image: project5Img,
         demo: "https://nattasith0.github.io/portfolio-website-collaborations/",
         github: "https://github.com/Nattasith0/portfolio-website-collaborations"
     }
