@@ -1,5 +1,8 @@
 // src/components/About/About.jsx
 import { Code, Palette, Zap, Heart } from 'lucide-react';
+import profileImg from '../../assets/images/profile.png';
+import resumeFile from '../../assets/PDF/resume.pdf';
+
 import './About.css';
 
 function About() {
@@ -42,7 +45,7 @@ function About() {
                         </div>
 
                         <div className="about-actions">
-                            <a href="/resume.pdf" className="btn-primary" download>
+                            <a href={resumeFile} className="btn-primary" download>
                                 Download Resume
                             </a>
                             <button
@@ -56,10 +59,7 @@ function About() {
 
                     <div className="about-image">
                         <div className="image-placeholder">
-                            <div className="placeholder-content">
-                                <p>Your Photo Here</p>
-                                <small>Add your profile picture</small>
-                            </div>
+                            <img src={profileImg} alt="Profile" className="profile-img" />
                         </div>
                     </div>
                 </div>
