@@ -129,19 +129,6 @@ html,body {
     background: var(--accent-secondary);
 }
 
-.App {
-    min-height: 100vh;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.section {
-    padding: 5rem 0;
-}
 
 /* Responsive */
 @media (max-width: 768px) {
