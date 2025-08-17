@@ -146,8 +146,8 @@ html,body {
 /* Responsive */
 @media (max-width: 768px) {
     html, body {
-        display: block; /* ❌ อย่าใช้ flex ที่ body */
-    text-align: initial; /* reset ให้ section control เอง */
+        display: block; 
+    text-align: initial; 
     justify-content: unset;
     align-items: unset;
     flex-direction: unset;

@@ -6,6 +6,10 @@
     align-items: center
 }
 
+#about {
+    scroll-margin-top: 80px;
+}
+
 .container {
     width: 100%;
     max-width: 1200px;
@@ -133,46 +137,82 @@
 /* Mobile Styles */
 @media (max-width: 768px) {
     .about-content {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
         text-align: center;
-        padding: 1rem;
+        padding: 1rem 0;
+    }
+
+    .about-image {
+        order: -1;
+        padding: 1.5rem 0;
+    }
+
+    .image-placeholder {
+        width: 220px;
+        height: 220px;
+        margin: 0 auto;
     }
 
     .about-text {
-        max-width: 100%;
+        max-width: 34ch;
         margin: 0 auto;
         line-height: 1.6;
-        font-size: 0.95rem;
-        overflow-wrap: break-word;
+        font-size: 1rem;
+        padding: 0 0.25rem;
     }
 
     .section-title {
-        font-size: 1.75rem;
+        font-size: 1.6rem;
+        margin: 0.25rem 0 0.5rem;
+        line-height: 1.2;
+    }
+
+    .about-description {
+        font-size: 1rem;
+        margin-bottom: 1rem;
     }
 
     .skills-grid {
-        gap: 0.5rem;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin: 1rem 0;
+        background: var(--bg-primary);
+        border: 1px solid var(--border-color);
+        border-radius: 0.75rem;
+        overflow: hidden;
     }
 
-    .skills-grid .skill-item {
-        min-width: 0;
-        text-align: center;
+    .skill-item {
+        border: none;
+        padding: 0.75rem;
+        justify-content: flex-start;
+    }
+
+    .skill-item+.skill-item {
+        border-top: 1px solid var(--border-color);
+    }
+
+
+    .skill-icon {
+        padding: 0.4rem;
     }
 
     .about-actions {
         flex-direction: column;
-        align-items: center;
-        gap: 0.75rem;
+        align-items: stretch;
+        gap: 0.6rem;
         margin-top: 0.75rem;
         width: 100%;
     }
 
-    .image-placeholder {
-        width: 250px;
-        height: 250px;
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 420px;
         margin: 0 auto;
-
+        padding: 0.7rem 1rem;
+        font-size: 1rem;
     }
 }
