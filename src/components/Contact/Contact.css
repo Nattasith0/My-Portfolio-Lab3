@@ -198,7 +198,10 @@
     }
 
     .contact-card {
-        grid-area: form;
+        width: 100%;
+        max-width: 100%;
+        padding: 1rem;
+        box-sizing: border-box;
     }
 
     .contact-info {
@@ -206,10 +209,9 @@
     }
 
     .form-group input,
-    .form-group textarea,
-    .btn-primary {
-        min-height: 48px;
-        font-size: 16px;
+    .form-group textarea {
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .btn-primary.btn-pill {

@@ -27,16 +27,40 @@
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 768px) {
+  #root {
+    max-width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
   }
+
+  .container {
+    max-width: 100% !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+  }
+
+  .contact-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .btn-primary {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  main, .page, .section:first-child {
+  padding-top: calc(var(--header-height, 60px) + 12px);
 }
 
-.card {
-  padding: 2em;
+img, table {
+  max-width: 100%;
+  height: auto;
 }
-
-.read-the-docs {
-  color: #888;
 }
