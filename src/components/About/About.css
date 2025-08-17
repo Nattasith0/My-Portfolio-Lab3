@@ -84,9 +84,11 @@
 }
 
 .about-image {
-    flex: 1 1 40%;  /* กว้างประมาณ 40% */
-  display: flex;
-  justify-content: center;
+    flex: 1 1 40%;
+    padding: 4rem 1rem;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .image-placeholder {
@@ -132,25 +134,45 @@
 @media (max-width: 768px) {
     .about-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1rem;
         text-align: center;
+        padding: 1rem;
+    }
+
+    .about-text {
+        max-width: 100%;
+        margin: 0 auto;
+        line-height: 1.6;
+        font-size: 0.95rem;
+        overflow-wrap: break-word;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     .skills-grid {
-        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-grid .skill-item {
+        min-width: 0;
+        text-align: center;
     }
 
     .about-actions {
         flex-direction: column;
         align-items: center;
+        gap: 0.75rem;
+        margin-top: 0.75rem;
+        width: 100%;
     }
 
     .image-placeholder {
         width: 250px;
         height: 250px;
+        margin: 0 auto;
+
     }
 }

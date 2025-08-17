@@ -39,6 +39,7 @@
 }
 
 html,body {
+    display: block;
     font-family: 'Inter', sans-serif;
     background: var(--bg-secondary);
     color: var(--text-primary);
@@ -47,14 +48,16 @@ html,body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-align: center;
+    text-align: initial;
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 .App {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     flex-direction: column;
     text-align: center;
 }
@@ -62,8 +65,9 @@ html,body {
 /* Utility Classes */
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
     padding: 0 2rem;
+    margin: 0 auto;
 }
 
 .section {
@@ -111,13 +115,16 @@ html,body {
 ::-webkit-scrollbar {
     width: 8px;
 }
+
 ::-webkit-scrollbar-track {
     background: var(--bg-secondary);
 }
+
 ::-webkit-scrollbar-thumb {
     background: var(--accent-primary);
     border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: var(--accent-secondary);
 }
@@ -138,11 +145,24 @@ html,body {
 
 /* Responsive */
 @media (max-width: 768px) {
+    html, body {
+        display: block; /* ❌ อย่าใช้ flex ที่ body */
+    text-align: initial; /* reset ให้ section control เอง */
+    justify-content: unset;
+    align-items: unset;
+    flex-direction: unset;
+    }
+
     .container {
         padding: 0 1rem;
     }
 
     .section {
         padding: 3rem 0;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
     }
 }
