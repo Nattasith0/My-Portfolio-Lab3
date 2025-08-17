@@ -1,12 +1,9 @@
 // src/components/Contact/Contact.jsx
 import './Contact.css';
-import {
-    FiMail, FiPhone, FiMapPin,
-    FiGithub, FiLinkedin, FiTwitter
-} from 'react-icons/fi';
+import { FiMail, FiPhone, FiMapPin, FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
+
 
 function Contact() {
-    // TODO: เปลี่ยนข้อมูลด้านซ้ายให้เป็นของคุณ
     const CONTACT = {
         email: 'Nattasitth_ma67@live.ac.th',
         phone: '+66 12 345 6789',

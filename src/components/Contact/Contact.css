@@ -1,3 +1,14 @@
+:root{
+  /* เผื่อไม่มีตัวแปรจาก global.css */
+  --bg-primary:#0d1422;
+  --bg-secondary:#0b1320;
+  --text-primary:#e6e8ee;
+  --text-secondary:#9aa3b2;
+  --border-color:#1e2636;
+  --accent-primary:#2d6bff;
+  --accent-tertiary:rgba(45,107,255,.25);
+}
+
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
